@@ -127,6 +127,33 @@ var themeMenus = {};
 </header>
 
 
+  <div id="originBgDiv" style="background: #fff; width: 100%;">
+
+      <div style="max-height:600px; overflow: hidden;  display: flex; display: -webkit-flex; align-items: center;">
+        <img id="originBg" width="100%" alt="" src="">
+      </div>
+
+  </div>
+
+  <script>
+  function setAboutIMG(){
+      var imgUrls = "https://github.com/user-attachments/assets/e9727ff3-6c40-4d60-8430-a70383e0798a".split(",");
+      var random = Math.floor((Math.random() * imgUrls.length ));
+      if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+        document.getElementById("originBg").src=imgUrls[random];
+      } else {
+        document.getElementById("originBg").src='/' + imgUrls[random];
+      }
+  }
+  bgDiv=document.getElementById("originBgDiv");
+  if(location.pathname.match('about')){
+    setAboutIMG();
+    bgDiv.style.display='block';
+  }else{
+    bgDiv.style.display='none';
+  }
+  </script>
+
 
 
   <div id="container">
@@ -171,7 +198,7 @@ var themeMenus = {};
 </ul>
 <h2 id="聯絡合作-Contact"><a href="#聯絡合作-Contact" class="headerlink" title="聯絡合作 (Contact)"></a>聯絡合作 (Contact)</h2><p>如果您對 ISO 管理系統建置、企業內訓或顧問諮詢有需求，歡迎隨時與我聯繫：</p>
 <ul>
-<li>✉️ <a href="mailto:&#x79;&#111;&#117;&#114;&#x2e;&#101;&#109;&#97;&#x69;&#108;&#x40;&#x65;&#x78;&#x61;&#109;&#112;&#108;&#101;&#x2e;&#99;&#111;&#x6d;">發送電子郵件</a></li>
+<li>✉️ <a href="mailto:&#121;&#x6f;&#117;&#114;&#x2e;&#101;&#x6d;&#97;&#105;&#108;&#x40;&#101;&#120;&#x61;&#109;&#112;&#x6c;&#101;&#x2e;&#99;&#x6f;&#109;">發送電子郵件</a></li>
 </ul>
 
       
